@@ -1,0 +1,21 @@
+Datosx = readmatrix("data9-x.xlsx");
+tx = Datosx(1:50,1);
+px = Datosx(1:50,2:end);
+ax = mean(px,2);
+
+f1 = fit(tx, ax,'exp1');
+
+Datosy = readmatrix("data9-y.xlsx");
+ty = Datosy(1:50,1);
+py = Datosy(1:50,2:end);
+ay = mean(py,2);
+
+f2 = fit(ty, ay,'exp1');
+
+Datosz = readmatrix("data9-z.xlsx");
+tz = Datosz(:,1);
+pz = Datosz(:,2:end);
+z = pz(:,1);
+az = mean(pz,2);
+
+f3 = fit(tz, az,'exp1');
