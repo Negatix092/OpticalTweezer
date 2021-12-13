@@ -1,0 +1,79 @@
+Datosx = readmatrix("data9-x.xlsx");
+tx = Datosx(:,1);
+px = Datosx(:,2:end);
+ax = mean(px,2);
+fx = (0.006812)*exp(-1.681e3*tx);
+
+Datosy = readmatrix("data9-y.xlsx");
+ty = Datosy(:,1);
+py = Datosy(:,2:end);
+ay = mean(py,2);
+fy = (0.01013)*exp(-2333*ty);
+
+Datosz = readmatrix("data9-z.xlsx");
+tz = Datosz(:,1);
+pz = Datosz(:,2:end);
+az = mean(pz,2);
+fz = (0.05023)*exp(-136.8*tz);
+
+%plot
+%subplot
+subplot(3,2,1)
+plot(tx,fx,"o");
+hold on
+plot(tx,ax,"b.");
+legend('Fit','Cx');
+xlabel('t [s]');
+ylabel('C_x(t) [V^2]');
+title('Análisis Normal');
+grid on  
+
+subplot(3,2,2)
+semilogx(tx,fx,"o");
+hold on
+semilogx(tx,ax,"b.");
+legend('Fit','Cx');
+xlabel('t (s)');
+ylabel('C_x(t) [V^2]');
+title('Análisis Logarítmico');
+grid on  
+
+subplot(3,2,3)
+plot(ty,fy,"o");
+hold on
+plot(ty,ay,"b.");
+legend('Fit','Cy');
+xlabel('t [s]');
+ylabel('C_y(t) [V^2]');
+title('Análisis Normal');
+grid on  
+
+subplot(3,2,4)
+semilogx(ty,fy,"o");
+hold on
+semilogx(ty,ay,"b.");
+legend('Fit','Cy');
+xlabel('t [s]');
+ylabel('C_y(t) [V^2]');
+title(['Análisis Logarítmico']);
+grid on 
+
+subplot(3,2,5)
+plot(tz,fz,"o");
+hold on
+plot(tz,az,"b.");
+legend('Fit','Cz');
+xlabel('t [s]');
+ylabel('C_z(t) [V^2]');
+title('Análisis Normal');
+grid on  
+
+subplot(3,2,6)
+semilogx(tz,fz,"o");
+hold on
+semilogx(tz,az,"b.");
+legend('Fit','Cz');
+xlabel('t [s]');
+ylabel('C_z(t) [V^2]');
+title('Análisis Logarítmico');
+grid on 
