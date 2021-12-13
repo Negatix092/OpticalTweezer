@@ -1,0 +1,12 @@
+kT = 4.0819e-21; %energia termica%
+g = 1.7819e-8;%constante de viscosidad teorica%
+
+A = 0.00995446;%Constante obtenidas del fit%
+B = 2244.56;%Constante obtenidas del fit%
+
+T = 1/B; %tiempo caracteristico%
+k_exp = kT/A;
+g_exp = T*k_exp;
+
+s = sqrt(g_exp/g);%Factor de Conversion%
+K_real = k_exp/(s*s);%Constante K aproximada%
