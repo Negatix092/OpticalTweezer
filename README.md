@@ -21,4 +21,4 @@
 #31.5 - data9 (medida que se encuentra ya hecha por default).
 
 
-#Si se tiene dudas sobre cómo ejecutar el código, contactarse con al mail: palex9664@gmail.com
+#Si se tiene dudas sobre cómo ejecutar el código, contactarse al mail: palex9664@gmail.com
